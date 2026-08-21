@@ -1,9 +1,12 @@
-import React from 'react'
-import { ArrowUpRight } from 'lucide-react';
+import React from "react";
+import HeroText from "./HeroText";
+import Arrow from "./Arrow";
 
 const LeftContent = () => {
   return (
-    <div className='flex flex-col justify-between h-full w-2/3'>
+    <div className="h-full flex flex-col justify-between w-1/3">
+      <HeroText />
+      <Arrow />
     </div>
   )
 }
