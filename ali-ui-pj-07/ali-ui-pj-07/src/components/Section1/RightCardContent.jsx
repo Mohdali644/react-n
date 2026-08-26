@@ -19,7 +19,6 @@ const RightCardContent = (props) => {
             <ArrowRight />
           </button>
         </div>
-
         </div>
       </div>
     </div>
