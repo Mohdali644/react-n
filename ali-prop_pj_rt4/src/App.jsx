@@ -6,12 +6,12 @@ const arr = [10, 20, 30]
 const App = () => {
   return (
     <div>
-      {/* <Card />
-      <Card /> */}
+      <Card />
+      <Card />
 
-      <User name='Ali'/>
+      {/* <User name='Ali'/>
       <User name='Yaseen'/>
-      <User name={arr[1]}/>
+      <User name={arr[1]}/> */}
     </div>
   )
 }
