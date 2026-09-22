@@ -18,7 +18,6 @@ const App = () => {
         setN(newN)
     }
 
-
   return (
     <div>
       <h1>{num.user}, {num.age}</h1>
