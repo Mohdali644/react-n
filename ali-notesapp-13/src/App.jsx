@@ -17,6 +17,11 @@ const App = () => {
 
     setTitle('')
     setDetails('')
+
+   if (title.trim() === "" || details.trim() === "") {
+    alert("Please fill in both title and details before adding a note!");
+    return;
+  }
   };
 
   return (
@@ -53,10 +58,13 @@ const App = () => {
         <h1 className="text-3xl font-semibold ">Your Notes</h1>
         <div className="gap-7 flex flex-wrap mt h-full overflow-auto">
           {task.map(function(elem,idx){
-              return <div key={idx} className="h-56 rounded-2xl bg-cover text-black py-10 px-11 w-40 bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]">
+              return <div key={idx} className="h-52 w-48 rounded-3xl bg-cover text-black py-10 px-10 bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]">
+                <div>
                 <h3 className="leading-tight text-[19px] font-bold">{elem.title}</h3>
-                <p className="mt-2 leading-tight font-medium text-gray-500">{elem.details}</p>
+                <p className="mt-2 leading-tight mr-11 font-medium text-gray-500">{elem.details}</p>
               </div>
+              <button className="bg-red-600 active:scale-95 mt-20 font-semibold flex text-center w-full justify-center text-white rounded-xl px-10 p-1">Delete</button>
+            </div>
           })}
         </div>
       </div>
