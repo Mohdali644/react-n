@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 
 const App = () => {
+  const [title, setTitle] = useState('')
+  const [details, setDetails] = useState('')
+
+  const [task, setTask] = useState([])
+
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("Form Submitted");
-  };
+    
+    const copyTask = [...task];
+    copyTask.push({title,details})
 
-  const [title, setTitle] = useState('')
+    setTask(copyTask)
+    console.log(task);
+
+    setTitle('')
+    setDetails('')
+  };
 
   return (
     <div className="h-screen lg:flex bg-black text-amber-50">
@@ -18,29 +29,35 @@ const App = () => {
       >
         <input
           type="text"
-          flex
           className="p-7 outline-none py-6 w-full border-4 border-amber-100 rounded-2xl"
           placeholder="Enter Notes Heading"
           value={title}
-          onChange={(e)=> {
-            console.log(e.target.value)
+          onChange={(e) => {
+              setTitle(e.target.value);
           }}
         />
         <input
           type="text"
           className="p-7 outline-none py-20 w-full border-4 border-amber-100 rounded-2xl"
           placeholder="Write details"
+          value={details}
+          onChange={(e) => {
+            setDetails(e.target.value)
+          }}
         />
-        <button className="bg-white w-full outline-none text-black font-semibold text-3xl rounded-2xl py-4 px-3">
+        <button className="bg-white active:scale-95 w-full outline-none text-black font-semibold text-3xl rounded-2xl py-4 px-3">
           Add Notes
         </button>
       </form>
       <div className="lg:w-1/2 lg:border-l-2 p-10">
         <h1 className="text-3xl font-semibold ">Your Notes</h1>
-        <div className="gap-4 flex flex-wrap mt-1 h-full overflow-auto">
-          <div className="h-52 w-40 rounded-3xl bg-white "></div>
-          <div className="h-52 w-40 rounded-3xl bg-white "></div>
-          <div className="h-52 w-40 rounded-3xl bg-white "></div>
+        <div className="gap-7 flex flex-wrap mt h-full overflow-auto">
+          {task.map(function(elem,idx){
+              return <div key={idx} className="h-56 rounded-2xl bg-cover text-black py-10 px-11 w-40 bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]">
+                <h3 className="leading-tight text-[19px] font-bold">{elem.title}</h3>
+                <p className="mt-2 leading-tight font-medium text-gray-500">{elem.details}</p>
+              </div>
+          })}
         </div>
       </div>
     </div>
