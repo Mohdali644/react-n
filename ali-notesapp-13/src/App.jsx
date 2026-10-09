@@ -64,32 +64,30 @@ const App = () => {
       <div className="lg:w-1/2 lg:border-l-2 p-10">
         <h1 className="text-3xl font-semibold ">Your Notes</h1>
         <div className="gap-7 flex flex-wrap content-start items-start mt-4 h-[90%] overflow-auto">
-          
-{task.map(function (elem, idx) {
-  return (
-    <div
-      key={idx}
-      className="h-52 w-48 shrink-0 rounded-3xl bg-cover bg-center text-black p-6 flex flex-col bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]"
-    >
-      <h3 className="leading-tight text-[19px] font-bold wrap-break-word">
-        {elem.title}
-      </h3>
+          {task.map(function (elem, idx) {
+            return (
+              <div
+                key={idx}
+                className="h-52 w-48 shrink-0 rounded-3xl bg-cover bg-center text-black p-6 flex flex-col bg-[url('https://static.vecteezy.com/system/resources/thumbnails/010/793/873/small/a-lined-note-paper-covered-with-transparent-tape-on-a-yellow-background-with-a-white-checkered-pattern-free-png.png')]"
+              >
+                <h3 className="leading-tight text-[19px] font-bold wrap-break-word">
+                  {elem.title}
+                </h3>
 
-      <p className="mt-2 leading-tight font-medium text-gray-500 wrap-break-word">
-        {elem.details}
-      </p>
+                <p className="mt-2 leading-tight font-medium text-gray-500 wrap-break-word">
+                  {elem.details}
+                </p>
 
-      <button
-        type="button"
-        onClick={() => deleteNote(idx)}
-        className="bg-red-600 active:scale-95 mt-auto font-semibold w-full text-center text-white rounded-xl p-1"
-      >
-        Delete
-      </button>
-    </div>
-  );
-})}
-
+                <button
+                  type="button"
+                  onClick={() => deleteNote(idx)}
+                  className="bg-red-600 active:scale-95 mt-auto font-semibold w-full text-center text-white rounded-xl p-1"
+                >
+                  Delete
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
