@@ -2,7 +2,7 @@ import React from 'react'
 
 const App = () => {
 
-  const formSub = (sub) => { //here we are receiving in args (sub) //
+  const formSub = (sub) => { //here we are receiving in args (sub) in arrow function //
     sub.preventDefault()
     console.log("Form Submitted");
   }
