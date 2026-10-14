@@ -10,6 +10,7 @@ const App = () => {
   // localStorage.removeItem('user')
 //-------------------------------------------------------------//
 
+
   //JSON.stringify method coverts the object into string in the local storage into showing each 
   // object value present in the object
 
@@ -21,6 +22,7 @@ const App = () => {
 
 
   // localStorage.setItem('user',JSON.stringify(user))
+  
 //------------------------------------------------------------------//
 
 
