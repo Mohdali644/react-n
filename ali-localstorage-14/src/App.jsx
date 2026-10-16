@@ -21,7 +21,7 @@ const App = () => {
   // }
 
 
-  // localStorage.setItem('user',JSON.stringify(user))
+// localStorage.setItem('user',JSON.stringify(user))
   
 //------------------------------------------------------------------//
 
