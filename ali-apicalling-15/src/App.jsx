@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+
+  const [change, setchange] = useState('')
+
+  function getData () {
+    console.log("Getting Data")
+  }
+
   return (
     <div>
-      App
+      <button onClick={getData}>Click karo</button>
     </div>
   )
 }
