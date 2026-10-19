@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const App = () => {
-
-  const [change, setchange] = useState('')
-
-  function getData () {
-    console.log("Getting Data")
+  async function getData () {
+   const demo = await fetch('https://jsonplaceholder.typicode.com/posts')
+   const data = await demo.json()
+   console.log(data)
+   
   }
 
   return (
     <div>
-      <button onClick={getData}>Click karo</button>
+      <button onClick={getData}>Get Data</button>
     </div>
   )
 }
