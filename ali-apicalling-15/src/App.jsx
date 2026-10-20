@@ -8,7 +8,6 @@ const App = () => {
   const getData = async () => {
 
     const response = await axios.get('https://picsum.photos/v2/list')
-
     setdata(response.data)
 
 
@@ -16,7 +15,7 @@ const App = () => {
   //  const demo = await fetch('https://jsonplaceholder.typicode.com/posts')
   //  const data = await demo.json()
   //  console.log(data)
-    //-------- and now we use axios api to install it we use npm i axios in the terminal---------// 
+    //-------- and now we use axios api to install it we use (npm i axios) in the terminal---------// 
   }
 
   return (
