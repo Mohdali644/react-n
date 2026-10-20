@@ -4,6 +4,8 @@ const App = () => {
 
   const [num, setNum] = useState(0)
 
+  const [num2, setNum2] = useState(50)
+
   useEffect (function(){
     console.log('use effect is running.........')
   },[]) //we have used array brackets here in this line because passing this epmty brackets//
@@ -11,7 +13,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>value of num is {num}</h1>
+      <h1>num is {num}</h1>
+      <h1>num is {num2}</h1>
       <button onClick={() => {
         setNum(num + 1)
       }}>Click</button>
