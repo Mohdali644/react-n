@@ -109,3 +109,12 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+button {
+  padding: 10px 30px;
+  margin:40px;
+  margin-top: 10rem;
+  font-size: 40px;
+  border-radius: 25px;
+  border: none;
+}
