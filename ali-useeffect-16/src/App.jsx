@@ -15,7 +15,8 @@ const App = () => {
   }
 
   useEffect (function(){
-    console.log('use effect is running')
+    aChanging()
+    // console.log('use effect is running') //
   },[a]) // the array i have passed because it depends on another when changing //
 
   return (
