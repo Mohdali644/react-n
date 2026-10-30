@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <div className="bg-black overflow-auto h-screen">
-      <div className="flex flex-wrap gap-5">{printUserData}</div>
+      <div className="flex h-[85%] flex-wrap gap-5">{printUserData}</div>
 
       <div className="flex justify-center gap-8 items-center p-5">
         <button
@@ -56,6 +56,9 @@ const App = () => {
         >
           Prev
         </button>
+
+        <h4 className="text-white font-semibold text-lg">Page {index}</h4>
+
         <button
           className="bg-amber-400 cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold"
           onClick={() => {
