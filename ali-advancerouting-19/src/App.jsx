@@ -9,6 +9,8 @@ const App = () => {
       <Navbar/>
       <Footer/>
       <Contact/>
+      {/* Note: to perform routing u need to run this command in the terminal
+       (npm i react-router-dom) */}
     </div>
   )
 }
