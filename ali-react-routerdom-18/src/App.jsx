@@ -6,8 +6,6 @@ import Contact from './pages/Contact'
 import Product from './pages/Product'
 import Navbar from './components/Navbar'
 
-
-
 const App = () => {
     return (
       <div>
