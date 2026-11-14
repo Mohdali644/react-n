@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
 import Courses from "./Pages/Courses";
+import CourseDetail from "./Pages/CourseDetail";
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
-
+        <Route path="/courses/:courseId" element={<CourseDetail />} />
+        {/* use (:id) to get into the page like /courses/coursedetail to get into coursedetail */}
 
         <Route path="*" element={<NotFound/>} />
       </Routes>
