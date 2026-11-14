@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Contact from "./Pages/Contact";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
+import Courses from "./Pages/Courses";
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/courses" element={<Courses />} />
+
 
         <Route path="*" element={<NotFound/>} />
       </Routes>
