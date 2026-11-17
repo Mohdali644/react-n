@@ -1,12 +1,11 @@
 import React from 'react'
+import Nav2 from './Nav2'
 
 const Navbar = () => {
   return (
     <div className='nav'>
       <h2>Samsung</h2>
-      <div>
-        
-      </div>
+      <Nav2 />
     </div>
   )
 }

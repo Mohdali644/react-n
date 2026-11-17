@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from './components/Navbar'
 
 const App = () => {
+
+  const [theme, setTheme] = useState('')
+
   return (
     <div>
-      App
+      <Navbar />
     </div>
   )
 }

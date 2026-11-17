@@ -4,10 +4,10 @@ const Nav2 = () => {
   return (
     <div className='nav2'>
         {/* to make more h4 type this (h4 * 4) */}
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
-        <h4></h4>
+        <h4>Home</h4>
+        <h4>About</h4>
+        <h4>Contact</h4>
+        <h4>Services</h4>
       
     </div>
   )
