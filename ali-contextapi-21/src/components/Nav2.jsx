@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nav2 = () => {
+const Nav2 = (props) => {
   return (
     <div className='nav2'>
         {/* to make more h4 type this (h4 * 4) */}
@@ -8,7 +8,7 @@ const Nav2 = () => {
         <h4>About</h4>
         <h4>Contact</h4>
         <h4>Services</h4>
-      
+        {props.theme}
     </div>
   )
 }
